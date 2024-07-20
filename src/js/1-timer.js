@@ -87,8 +87,12 @@ const handleClickFunc = () => {
 
     diff -= TIME_DELAY;
 
+    console.log(intervalId);
+    console.log(diff);
+
     if (diff <= 0) {
       clearInterval(intervalId);
+      intervalId = null;
     }
   }, TIME_DELAY);
 };
